@@ -3,16 +3,16 @@
     <div id="logo">
       <a href="#">Vue E-shop</a>
     </div>
-    <div id="cart">
-      🛒
-      empty
-    </div>
+    <the-cart />
   </header>
 </template>
 
 <script>
+  import TheCart from './TheCart'
   export default {
-
+    components: {
+      TheCart
+    }
   }
 </script>
 

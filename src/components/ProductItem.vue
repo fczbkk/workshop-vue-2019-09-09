@@ -19,16 +19,22 @@
           <div class="price">
             {{ productData.price }},- Kč
           </div>
-          <div class="addToCart">
-            <button>🛒 Add to cart</button>
-          </div>
+          <add-to-cart
+            :availability="productData.availability"
+            :productId="productData.id"
+          />
         </div>
       </div>
     </div>
 </template>
 
 <script>
+  import AddToCart from './AddToCart'
+
   export default {
+    components: {
+      AddToCart
+    },
     props: {
       productData: {
         type: Object,
