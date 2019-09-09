@@ -1,165 +1,24 @@
 <template>
   <div>
-    <header>
-      <div id="logo">
-        <a href="#">Vue E-shop</a>
-      </div>
-      <div id="cart">
-        🛒
-        empty
-      </div>
-    </header>
+    <the-header />
 
     <main>
-
-      <h1>E-shop home</h1>
-
-      <h2>Categories</h2>
-
-      <ul>
-        <li><a href="#">First category</a></li>
-        <li><a href="#">Second category</a></li>
-        <li><a href="#">Third category</a></li>
-        <li><a href="#">First category</a></li>
-        <li><a href="#">Second category</a></li>
-        <li><a href="#">Third category</a></li>
-      </ul>
-
-      <h2>Highlighted products</h2>
-
-      <div class="productsList">
-
-        <div class="box">
-          <div class="title">
-            <h3>Product title</h3>
-          </div>
-          <div class="content">
-            <div class="productItem">
-              <div class="productImage">
-                <img src="blue-t-shirt.jpg" alt="" height="100">
-              </div>
-              <p>Product description</p>
-              <div class="price">
-                500,- Kč
-              </div>
-              <div class="addToCart">
-                <button>🛒 Add to cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="title">
-            <h3>Product title</h3>
-          </div>
-          <div class="content">
-            <div class="productItem">
-              <div class="productImage">
-                <img src="blue-t-shirt.jpg" alt="" height="100">
-              </div>
-              <p>Product description</p>
-              <div class="price">
-                500,- Kč
-              </div>
-              <div class="addToCart">
-                <button>-</button>
-                <input type="text" size="3" value="1">
-                <button>+</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="title">
-            <h3>Product title</h3>
-          </div>
-          <div class="content">
-            <div class="productItem">
-              <div class="productImage">
-                <img src="blue-t-shirt.jpg" alt="" height="100">
-              </div>
-              <p>Product description</p>
-              <div class="price">
-                500,- Kč
-              </div>
-              <div class="addToCart">
-                <span class="soldOut">Sold out</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <h1>Product detail</h1>
-
-      <div class="productDetail">
-
-        <div class="details">
-
-          <h2>Product title</h2>
-
-          <div class="tabs">
-            <button>Description</button>
-            <button class="active">Variants</button>
-          </div>
-          <div class="tabContent">
-            <ul>
-              <li>
-                <label>
-                  <input type="radio" name="variant" value="blue" checked>
-                  blue
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="variant" value="red">
-                  red
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="radio" name="variant" value="purple">
-                  purple
-                </label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="price">
-            500,- Kč
-          </div>
-
-          <div class="addToCart">
-            <button>🛒 Add to cart</button>
-          </div>
-
-        </div>
-
-        <div class="image">
-          <img src="blue-t-shirt.jpg" alt="">
-        </div>
-
-      </div>
-
+      <router-view />
     </main>
 
-    <footer>
-      <div id="usefulLinks">
-        <a href="#">Send us feedback</a>
-      </div>
-      <div id="copyright">
-        &copy; 2019 by Fczbkk
-      </div>
-    </footer>
+    <the-footer />
   </div>
 </template>
 
 <script>
-  export default {
+  import TheFooter from './components/TheFooter'
+  import TheHeader from './components/TheHeader'
 
+  export default {
+    components: {
+      TheFooter,
+      TheHeader
+    }
   }
 </script>
 
